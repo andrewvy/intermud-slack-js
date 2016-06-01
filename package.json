@@ -1,0 +1,12 @@
+{
+  "name": "intermud-slack-js",
+  "version": "1.0.0",
+  "description": "I3 protocol to Slack",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node src/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andrew Vy",
+  "license": "MIT"
+}
