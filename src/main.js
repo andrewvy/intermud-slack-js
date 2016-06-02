@@ -44,17 +44,17 @@ SlackClient.on(CLIENT_EVENTS.RTM.RTM_CONNECTION_OPENED, function() {
   }
 
   SlackClient.on(RTM_EVENTS.MESSAGE, function(message) {
-    var messageText = message.text
+    var messageText = message.text || ''
     var user = SlackClient.dataStore.getUserById(message.user)
 
-    if (!user) {
+    if (!user || messageText.indexOf('mud ') != 0) {
       return
     }
 
     var userName = user.name
 
     for (var i = 0; i < sockets.length; i++) {
-      sendMessage(sockets[i], userName, messageText)
+      sendMessage(sockets[i], userName, messageText.slice(4, messageText.length))
     }
   })
 
