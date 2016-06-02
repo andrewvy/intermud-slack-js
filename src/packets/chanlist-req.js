@@ -1,8 +1,7 @@
-var ChanlistReq = function(data) {
-  this.data = data
+var ChanlistReq = function() {
 }
 
-ChanlistReq.prototype.deserialize = function() {
+ChanlistReq.prototype.deserialize = function(data) {
 }
 
 ChanlistReq.prototype.respond = function(socket) {

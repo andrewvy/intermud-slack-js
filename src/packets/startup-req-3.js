@@ -1,8 +1,7 @@
-var StartupReq3 = function(data) {
-  this.data = data
+var StartupReq3 = function() {
 }
 
-StartupReq3.prototype.deserialize = function() {
+StartupReq3.prototype.deserialize = function(data) {
 }
 
 StartupReq3.prototype.respond = function(socket) {
