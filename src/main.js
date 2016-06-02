@@ -46,6 +46,11 @@ SlackClient.on(CLIENT_EVENTS.RTM.RTM_CONNECTION_OPENED, function() {
   SlackClient.on(RTM_EVENTS.MESSAGE, function(message) {
     var messageText = message.text
     var user = SlackClient.dataStore.getUserById(message.user)
+
+    if (!user) {
+      return
+    }
+
     var userName = user.name
 
     for (var i = 0; i < sockets.length; i++) {
